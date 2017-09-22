@@ -73,7 +73,7 @@
             },
             switchPanel: function(el) {
                 var $currentPanel = $(el).closest('.box');
-                $currentPanel.hide().removeClass('flipInY shade').find('.form-group').removeClass('has-error').find('input').val('');
+                $currentPanel.hide().removeClass('flipInY shade').find('.form-group').removeClass('has-error');
                 $currentPanel.siblings('.box').show().addClass('flipInY');
             },
             getURLParameter: function(paramName) {
