@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>杯子金服-聚合支付、云金融、大数据SAAS服务平台</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="http://www.beizijinfu.com/hplus/favicon.ico">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+  <div class="box login shake">
+    <div class="logo"><img src="assets/img/logo-full.png">
+    </div>
+    <div class="form-group border-bottom tabs">
+      <div class="tab-item active">
+        <input type="radio" name="login_type" checked=""> 商户登录</div>
+      <div class="tab-item">
+        <input type="radio" name="login_type"> 渠道登录</div>
+    </div>
+    <div class="form-group has-error border-bottom">
+      <i class="icon iconfont icon-user"></i>
+      <input type="text" placeholder="账号" class="form-control">
+      <div class="help-block">账号错误</div>
+    </div>
+    <div class="form-group border-bottom">
+      <i class="icon iconfont icon-password"></i>
+      <input type="password" placeholder="密码" class="form-control">
+      <div class="help-block">密码错误</div>
+    </div>
+    <div class="form-group border-bottom">
+      <i class="icon iconfont icon-code"></i>
+      <input type="text" placeholder="验证码" maxlength="4" class="form-control codetext">
+      <img class="J_codeimg" src="assets/img/imageshow.jpg" />
+      <div class="help-block help-block-fix">验证码错误</div>
+    </div>
+    <div class="form-group">
+      <input type="button" value="登录" class="submit_btn">
+    </div>
+    <div class="form-group box-footer">
+      <p class="clearfix">
+        <div class="pull-left">
+          <label>
+            <input type="checkbox"> 子账号登录</label>
+        </div>
+        <div class="pull-right"><a href="javascript:;">忘记密码？</a> | <a href="javascript:;" onclick="Index.switchPanel(this)">立即注册</a>
+        </div>
+      </p>
+    </div>
+  </div>
+  <div class="box register shake" style="display:none">
+    <div class="logo"><img src="assets/img/logo-full.png">
+    </div>
+    <div class="form-group border-bottom tabs">
+      <div class="tab-item active" data-target="#tab1">
+        <input type="radio" name="reg_type" value="1" checked=""> 手机注册</div>
+      <div class="tab-item" data-target="#tab2">
+        <input type="radio" value="2" name="reg_type"> 邮箱注册</div>
+    </div>
+    <div class="tab-pane active" id="tab1">
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-shouji"></i>
+        <input type="text" placeholder="手机号" class="form-control">
+        <div class="help-block">手机号错误</div>
+      </div>
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-code"></i>
+        <input type="text" placeholder="短信验证码" maxlength="4" class="form-control codetext">
+        <a href="javascript:;" class="btn btn-primary getCode">发送验证码</a>
+        <div class="help-block help-block-fix">验证码错误</div>
+      </div>
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-password"></i>
+        <input type="password" placeholder="设置密码" class="form-control">
+        <div class="help-block">密码错误</div>
+      </div>
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-repeat"></i>
+        <input type="password" placeholder="确认密码" class="form-control">
+        <div class="help-block">密码不一致</div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-email"></i>
+        <input type="text" placeholder="邮箱" class="form-control">
+        <div class="help-block">手机号错误</div>
+      </div>
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-code"></i>
+        <input type="text" placeholder="邮箱验证码" maxlength="4" class="form-control codetext">
+        <a href="javascript:;" class="btn btn-primary getCode">发送验证码</a>
+        <div class="help-block help-block-fix">验证码错误</div>
+      </div>
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-password"></i>
+        <input type="password" placeholder="设置密码" class="form-control">
+        <div class="help-block">密码错误</div>
+      </div>
+      <div class="form-group border-bottom">
+        <i class="icon iconfont icon-repeat"></i>
+        <input type="password" placeholder="确认密码" class="form-control">
+        <div class="help-block">密码不一致</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="button" value="注册" class="submit_btn">
+    </div>
+    <div class="form-group box-footer">
+      <p class="clearfix">
+        <div class="pull-right"><a href="javascript:;" onclick="Index.switchPanel(this)">立即登录</a>
+        </div>
+      </p>
+    </div>
+  </div>
+
+  <!-- 你可以添加个多“.slideshow-image”项目, 记得修改CSS -->
+  <div class="slideshow">
+    <div class="slideshow-image" style="background-image:url('assets/img/8.jpg')"></div>
+  </div>
+  <div class="mask"></div>
+  <script src='http://libs.baidu.com/jquery/1.10.0/jquery.min.js'></script>
+  <script src="assets/js/index.js"></script>
+  <script>
+    Index.init();
+  </script>
+</body>
+
+</html>
