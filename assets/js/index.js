@@ -30,15 +30,22 @@
                     height: viewH
                 }
             }
-        }
+        };
         var setWindowSize = function() {
             $('body').css({
                 'width': getViewPort().width,
                 'height': getViewPort().height
             })
-        }
+        };
         return {
             init: function() {
+                /* ?page=register 获取url的参数，对应切换面板*/
+                var flag = Index.getURLParameter('page') || 'login';
+                if (flag == 'register') {
+                    $('#reg-switcher').click();
+                } else if (flag == 'login') {
+                    $('#login-switcher').click();
+                }
                 /* 启动窗口尺寸适配*/
                 setWindowSize();
                 window.onresize = function() {
@@ -54,9 +61,9 @@
                     $this.find('input[type="radio"]').prop('checked', true)
                 });
                 /*注册面板 实现切换效果*/
-                $('.tab-item[data-target]').bind('click',function(){
-                  var selector = $(this).attr('data-target');
-                  $(selector).addClass('active').siblings('.tab-pane').removeClass('active');
+                $('.tab-item[data-target]').bind('click', function() {
+                    var selector = $(this).attr('data-target');
+                    $(selector).addClass('active').siblings('.tab-pane').removeClass('active');
                 });
                 // $("body").keydown(function() {
                 //     if (event.keyCode == "13") { //keyCode=13是回车键
@@ -68,6 +75,17 @@
                 var $currentPanel = $(el).closest('.box');
                 $currentPanel.hide().removeClass('flipInY shade').find('.form-group').removeClass('has-error').find('input').val('');
                 $currentPanel.siblings('.box').show().addClass('flipInY');
-            }
+            },
+            getURLParameter: function(paramName) {
+                var searchString = window.location.search.substring(1),
+                    i, val, params = searchString.split("&");
+                for (i = 0; i < params.length; i++) {
+                    val = params[i].split("=");
+                    if (val[0] == paramName) {
+                        return unescape(val[1]);
+                    }
+                }
+                return null;
+            },
         }
     })()
