@@ -6,7 +6,7 @@
 html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; font-size: 62.5%; }
 body { font-size: 14px; line-height: 1.8; overflow: hidden; }
 body, button, input, select, textarea { font-family: 'helvetica neue', arial, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', 'Microsoft YaHei', sans-serif; -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis; text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis; }
-input, textarea, select, button { outline: none; border: 0; }
+input, textarea, select, button { outline: none; border: 0; -webkit-appearance : none ;}
 /*(去除chrome下表单的边框)*/
 label { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 /*(清除手机端点击 出现蓝色背景)*/
