@@ -6,7 +6,7 @@
 html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; font-size: 62.5%; }
 body { font-size: 14px; line-height: 1.8; overflow: hidden; }
 body, button, input, select, textarea { font-family: 'helvetica neue', arial, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', 'Microsoft YaHei', sans-serif; -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis; text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis; }
-input, textarea, select, button { outline: none; border: 0; -webkit-appearance : none ;}
+input, textarea, select, button { outline: none; border: 0; -webkit-appearance : none ; border-radius: 0;}
 /*(去除chrome下表单的边框)*/
 label { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 /*(清除手机端点击 出现蓝色背景)*/
@@ -30,7 +30,7 @@ a:active, a:hover { outline: 0 none; }
    ******************************************************************** */
 
 .header { position: absolute; width: 100%; height: 100px; top: 0; left: 0; z-index: 3; padding: 10px 30px; }
-.box { position: absolute; left: 50%; top: 50%; z-index: 3; animation-duration: 1s; animation-fill-mode: both; }
+.box { position: absolute; left: 50%; top: 50%; z-index: 3333333; animation-duration: 1s; animation-fill-mode: both; }
 .box.login{width: 460px; height: 320px;  margin-left: -230px; margin-top: -160px; }
 .box.register{width: 460px; height: 360px;  margin-left: -230px; margin-top: -180px; }
 .box-footer{color: #fff; line-height: 42px;}
